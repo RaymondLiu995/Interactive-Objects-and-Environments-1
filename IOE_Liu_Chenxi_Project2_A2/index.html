@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>IOE Project 2 Assignment 2</title>
+    <!-- p5 -->
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.dom.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+    <!-- ml5 -->
+    <script src="libraries/ml5.min.js"></script>
+    <!-- schetch -->
+    <script src="sketch.js"></script>
+    <style>
+        
+        html, body {
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+                    padding: 0;
+                    margin: 0;
+                }
+
+        #sketch-holder {
+          position: relative;
+        }
+        #canvas-holder {
+            height: 135px;
+        }
+        #slide-holder {
+            align-content: center;
+        }
+
+        .slides {
+            padding: 0;
+            width: 609px;
+            height: 420px;
+            display: block;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .slides * {
+            user-select: none;
+            -ms-user-select: none;
+            -moz-user-select: none;
+            -khtml-user-select: none;
+            -webkit-user-select: none;
+        }
+
+        .slides input { display: none; }
+
+        .slide-container { display: block; }
+
+        .slide {
+            top: 0;
+            opacity: 0;
+            width: 1320px;
+            height: 1020px;
+            left: -315px;
+            display: block;
+            position: absolute;
+            transform: scale(0);
+            transition: all .7s ease-in-out;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+        }
+
+
+        .slide:hover + .nav label { opacity: 0; }
+
+        .nav label:hover { opacity: 1; }
+
+        .nav .next { right: 0; }
+
+        input:checked + .slide-container  .slide {
+            opacity: 1;
+            transform: scale(1);
+            transition: opacity 1s ease-in-out;
+        }
+
+        input:checked + .slide-container .nav label { display: block; }
+
+        canvas {
+            display: block;
+            width: 100% !important;
+            height: auto !important;
+            vertical-align: top;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+<div id="sketch-holder">
+  <div id="canvas-holder"></div>
+</div>
+</body>
+</html>
