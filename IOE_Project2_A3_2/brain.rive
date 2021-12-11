@@ -1,0 +1,7 @@
+! version = 2.0
+
++ *
+- which background color would you like to choose? white,yellow,green,or blue.
+
++ i choose (white|yellow|green|blue)
+- So it shall be <star1>
