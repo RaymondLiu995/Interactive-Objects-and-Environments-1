@@ -1,0 +1,38 @@
+// Chatbot's brain
+! version = 2.0
+
+! sub who's = who is
+
+// + *
+// - try saying captain
+
+// + captain
+// - Who's there?
+
+// + *
+// % who is there
+// - <star> who?
+
+// + *
+// % * who
+// - LOL! <star>! That's funny!
+
+
+
+
++ *
+- Yes sir Mr. President! Please repeat the launch code{topic=2}
+
+> topic 2
+
+  // This will match if the word "sorry" exists ANYWHERE in their message
+  + [*] 2 [*]
+  - Confirm! Missile launching in 3. 2. 1{topic=random}
+
+  + *
+  - Mr. President...The code is incorrect 
+  - Sorry Sir, please try again
+  - Code invaild Sir!
+  - You are an imposter! ARREST THIS MAN!!!
+
+< topic
